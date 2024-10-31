@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Generador de Código QR</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+<div class="container">
+    <h1>WELCOME, HERE YOU CAN GENERATE QR CODE.</h1>
+    <form method="POST">
+        <label for="texto">Enter your text or url:</label>
+        <input type="text" id="texto" name="texto" required>
+
+        <label for="tamano">Size (e.g. 10):</label>
+        <input type="number" id="tamano" name="tamano" min="1" required>
+
+        <button type="submit">GENERATE QR</button>
+    </form>
+
+    <!-- Sección informativa y de ejemplo al final del contenedor -->
+    <div class="info">
+        <h2>¿What are QR Codes?</h2>
+        <p>The QR codes (in English, QR Code) are a type of two-dimensional barcodes. Unlike a conventional barcode (such as EAN-13, Code 3 of 9, UPC), the information is encoded within a square, allowing a large amount of alphanumeric information to be stored.</p>
+        <p>QR codes are easily identifiable by their square shape and by the three squares located in the top corners and the bottom left corner.</p>
+        <img src="https://www.codigos-qr.com/wp-content/uploads/2009/06/qr-code_codigo-qr.png" alt="Código QR de ejemplo" class="qr-example">
+    </div>
+
+    <!-- Pie de página -->
+    <div class="footer">
+        Copyright © 2023 Johnny Cedeño. All Rights Reserved.
+    </div>
+</div>
+</body>
+</html>
